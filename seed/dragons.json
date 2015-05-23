@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Saphira",
+    "histories": ["Eragon"],
+    "type": "Fire"
+  },
+  {
+    "name": "Draco",
+    "histories": ["Dragonheart"],
+    "type": "Fire"
+  },
+  {
+    "name": "Toothless",
+    "histories": ["How to Train Your Dragon"],
+    "type": "Night Fury"
+  },
+  {
+    "name": "Norbert",
+    "histories": ["Harry Potter and the Philosopher's Stone"],
+    "type": "Fire"
+  },
+  {
+    "name": "Charizard",
+    "histories": ["Pokémon"],
+    "type": "Fire"
+  },
+  {
+    "name": "Malévola",
+    "histories": ["A Bela Adormecida"],
+    "type": "Witch"
+  },
+  {
+    "name": "Falkor",
+    "histories": ["História sem Fim"],
+    "type": "Cute"
+  },
+  {
+    "name": "Tiamat",
+    "histories": ["Dungeons &amp; Dragons", "Mith"],
+    "type": "Hydra"
+  },
+  {
+    "name": "Dragão (Shrek)",
+    "histories": ["Shrek"],
+    "type": "Fire"
+  },
+  {
+    "name": "Mushu",
+    "histories": ["Mulan"],
+    "type": "Fire"
+  },
+  {
+    "name": "Shenlong",
+    "histories": ["Dragon Ball"],
+    "type": "Wyrm"
+  },
+  {
+    "name": "Drogon",
+    "histories": ["Game of Thrones"],
+    "type": "Fire"
+  },
+  {
+    "name": "Rhaegal",
+    "histories": ["Game of Thrones"],
+    "type": "Fire"
+  },
+  {
+    "name": "Viserion",
+    "histories": ["Game of Thrones"],
+    "type": "Fire"
+  },
+  {
+    "name": "Smaug",
+    "histories": ["The Hobbit"],
+    "type": "Fire"
+  }
+]
