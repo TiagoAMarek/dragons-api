@@ -9,130 +9,15 @@
     <h2 class="api-item-title">Dragons CRUD</h2>
 
     <ul class="endpoints">
-      <li class="endpoint-item noun-get">
-        <div class="endpoint-heading">
-          <span class="noun fleft">GET</span>
-          <a href="/api/dragons" target="_blank" class="endpoint-name fleft">/api/dragons</a>
-        </div>
-        <div class="endpoint-content">
-          <h3>Response Body</h3>
-<pre>
-[
-  {
-    _id: "5560dab29a63224b3eb78e59",
-    name: "Dragão (Shrek)",
-    type: "Fire",
-    created_at: "2015-05-23T19:53:22.430Z",
-    slug: "dragao-shrek",
-    __v: 0,
-    histories: [ ]
-  },
-  {
-    _id: "5560dae29a63224b3eb78e5a",
-    name: "Tiamat",
-    type: "Hydra",
-    created_at: "2015-05-23T19:54:10.802Z",
-    slug: "tiamat",
-    __v: 0,
-    histories: [
-      "Mith",
-      "Dungeons &amp; Dragons"
-    ]
-  }
-]
-</pre>
-        </div><!-- .endpoint-content -->
-      </li>
-
-      <li class="endpoint-item noun-get">
-        <div class="endpoint-heading">
-          <span class="noun fleft">GET</span>
-          <span class="endpoint-name fleft">/api/dragons/:_id</span>
-        </div>
-        <div class="endpoint-content">
-          <h3>Parameters</h3>
-          <p>slug | String | Dragon's name slug</p>
-
-          <h3>Response Body</h3>
-<pre>
-{
-  _id: "5560dae29a63224b3eb78e5a",
-  name: "Tiamat",
-  type: "Hydra",
-  created_at: "2015-05-23T19:54:10.802Z",
-  slug: "tiamat",
-  __v: 0,
-  histories: [
-    "Mith",
-    "Dungeons &amp; Dragons"
-  ]
-}
-</pre>
-        </div><!-- .endpoint-content -->
-      </li>
-
-      <li class="endpoint-item noun-post">
-        <div class="endpoint-heading">
-          <span class="noun fleft">POST</span>
-          <span class="endpoint-name fleft">/api/dragons/</span>
-        </div>
-        <div class="endpoint-content">
-          <h3>Response Body</h3>
-<pre>
-{
-  "__v": 0,
-  "name": "Dragão (Shrek)",
-  "type": "Fire",
-  "created_at": "2015-05-23T19:46:24.238Z",
-  "slug": "dragao-shrek",
-  "_id": "5560d9109473a37d390dead1",
-  "histories": [ ]
-}
-</pre>
-        </div><!-- .endpoint-content -->
-      </li>
-
-      <li class="endpoint-item noun-put">
-        <div class="endpoint-heading">
-          <span class="noun fleft">PUT</span>
-          <span class="endpoint-name fleft">/api/dragons/:_id</span>
-        </div>
-        <div class="endpoint-content">
-          <h3>Parameters</h3>
-          <p>slug | String | Dragon's name slug</p>
-</pre>
-
-          <h3>Response Body</h3>
-<pre>
-{
-  "ok": 1,
-  "nModified": 1,
-  "n": 1
-}
-</pre>
-        </div><!-- .endpoint-content -->
-      </li>
-
-      <li class="endpoint-item noun-delete">
-        <div class="endpoint-heading">
-          <span class="noun fleft">DELETE</span>
-          <span class="endpoint-name fleft">/api/dragons/:_id</span>
-        </div>
-        <div class="endpoint-content">
-          <h3>Parameters</h3>
-          <p>slug | String | Dragon's name slug</p>
-
-          <h3>Response Body</h3>
-<pre>
-{
-  "ok": 1,
-  "n": 1
-}
-</pre>
-        </div><!-- .endpoint-content -->
-      </li>
-    </ul><!-- .endpoints -->
+{% include 'crud/get.html' %}
+{% include 'crud/get_id.html' %}
+{% include 'crud/post.html' %}
+{% include 'crud/put.html' %}
+{% include 'crud/delete.html' %}
+   </ul><!-- .endpoints -->
   </li><!-- .api-item -->
+
+
 </ul><!-- #apis -->
 
 {% endblock %}
