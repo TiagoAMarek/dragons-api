@@ -1,4 +1,4 @@
-# Dragons Api
+# Dragons API
 API to register all the dragons around the World.
 
 [![Build Status](https://travis-ci.org/wbruno/dragons-api.svg?branch=master)](https://travis-ci.org/wbruno/dragons-api)
