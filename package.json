@@ -13,7 +13,7 @@
     "start": "node ./bin/www",
     "pretest": "./node_modules/jshint/bin/jshint *.js models/*.js controllers/*.js tests/*",
     "test": "export DEBUG=dragons:* && node_modules/istanbul/lib/cli.js cover node_modules/.bin/_mocha tests/unit/*",
-    "test-api": "node_modules/istanbul/lib/cli.js cover node_modules/.bin/_mocha tests/api/*",
+    "test-api": "export NODE_ENV=test && export DEBUG=dragons:* && node_modules/istanbul/lib/cli.js cover node_modules/.bin/_mocha tests/api/*",
     "nodemon": "export DEBUG=dragons:* && nodemon ./bin/www"
   },
   "dependencies": {
@@ -37,6 +37,7 @@
     "istanbul": "^0.3.14",
     "jshint": "^2.7.0",
     "mocha": "^2.2.5",
+    "mongojs": "^0.18.2",
     "supertest": "^1.0.1"
   }
 }

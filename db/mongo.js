@@ -1,6 +1,6 @@
-var mongoose  = require('mongoose'),
-    debug     = require('debug')('dragons:db'),
-    config    = require('config');
+var mongojs = require('mongojs'),
+    debug   = require('debug')('dragons:db'),
+    config  = require('config');
 
 'use strict';
 function _connection() {
@@ -13,17 +13,12 @@ function _connection() {
       auth = username ? /* istanbul ignore next */ username + ':' + password + '@' : '';
 
   return 'mongodb://' + auth + host + ':' + port + '/' + database;
-}
+};
 
-mongoose.connect(_connection());
-var db = mongoose.connection;
+var db = mongojs(_connection());
 /* istanbul ignore next */
 db.on('error', function(err) {
   debug(err);
 });
 
-db.once('open', function (callback) {
-  debug('connected to mongodb');
-});
-
-module.exports = mongoose;
+module.exports = db;
