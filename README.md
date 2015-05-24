@@ -6,6 +6,19 @@ API to register all the dragons around the World.
 [![GitHub release](https://img.shields.io/github/release/wbruno/dragons-api.svg)]()
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/wbruno/dragons-api/blob/master/LICENSE)
 
+# Development
+```
+$ npm install
+$ mongod            # up mongodb
+$ npm run nodemon   # starts nodemon watch server
+```
+
+# Testing
+```
+$ npm test          # run jshint and unit tests
+$ npm run test-api  # run integration tests
+```
+
 ## Contributing
 
 Check [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
