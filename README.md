@@ -7,6 +7,13 @@ API to register all the dragons around the World.
 [![GitHub release](https://img.shields.io/github/release/wbruno/dragons-api.svg)]()
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/wbruno/dragons-api/blob/master/LICENSE)
 
+# Keep your fork up to date
+```
+$ git remote add wbruno git@github.com:wbruno/dragons-api.git # do it once
+$ git remote -v                                               # just to check the remotes
+$ git pull wbruno master                                      # do it always
+```
+
 # Development
 ```
 $ npm install
