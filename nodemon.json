@@ -2,6 +2,7 @@
   "restartable": "rs",
   "ignore": [
     ".git",
+    "coverage",
     "node_modules/*",
     "public/*",
     "src/*"
