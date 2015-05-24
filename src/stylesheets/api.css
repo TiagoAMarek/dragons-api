@@ -63,23 +63,23 @@ h3 { font-size: 1.1em; }
 
 .noun-get { background-color: #E7F0F7; border: 1px solid #c3d9ec }
 .noun-post { background-color: #E7F6EC; border: 1px solid #c3e8d1 }
-.noun-put { background-color: #f6e7f7; border: 1px solid #fdb3ff }
-.noun-delete { background-color: #F5E8E8; border: 1px solid #e8c6c7 }
+.noun-put { background-color: #f6e7f7; border: 1px solid #dcaaf7 }
+.noun-delete { background-color: #ffe1e1; border: 1px solid #ee9898 }
 
 .noun-get h3 { color: #0F6AB4; }
 .noun-post h3 { color: #10A54A; }
-.noun-put h3 { color: #ce39c9; }
-.noun-delete h3 { color: #A41E22; }
+.noun-put h3 { color: #8320b7; }
+.noun-delete h3 { color: #dc2f2f; }
 
 .noun-get .endpoint-heading { border-bottom: 1px solid #c3d9ec }
 .noun-post .endpoint-heading { border-bottom: 1px solid #c3e8d1 }
-.noun-put .endpoint-heading { border-bottom: 1px solid #fdb3ff }
-.noun-delete .endpoint-heading { border-bottom: 1px solid #e8c6c7 }
+.noun-put .endpoint-heading { border-bottom: 1px solid #dcaaf7 }
+.noun-delete .endpoint-heading { border-bottom: 1px solid #ee9898 }
 
 .noun-get .noun { background-color: #0F6AB4; }
 .noun-post .noun { background-color: #10A54A; }
-.noun-put .noun { background-color: #ce39c9; }
-.noun-delete .noun { background-color: #A41E22; }
+.noun-put .noun { background-color: #8320b7; }
+.noun-delete .noun { background-color: #dc2f2f; }
 
 .endpoint-content { padding: 15px; }
 
