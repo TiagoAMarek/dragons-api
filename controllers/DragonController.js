@@ -1,5 +1,6 @@
 'use strict';
-var _Promise = require('bluebird');
+var debug     = require('debug')('dragons:model'),
+    _Promise  = require('bluebird');
 
 function DragonController(DAO) {
   this.DAO = _Promise.promisifyAll(DAO);
@@ -23,7 +24,13 @@ DragonController.prototype.retrieveOne = function(request, response, next) {
   var slug = request.params.slug;
 
   this.DAO.findOneAsync({ slug: slug }).then(function(result) {
-    response.json(result);
+    if (result === null) {
+      var err = new Error('Dragon not found');
+      err.status = 404;
+      next(err);
+    } else {
+      response.json(result);
+    }
   })
   .catch(next);
 };
