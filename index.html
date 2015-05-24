@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dragons API</title>
+
+  <link rel="stylesheet" type="text/css" href="src/css/table.css">
+</head>
+<body>
+
+<table id="result">
+  <thead>
+    <tr>
+      <th>_id</th>
+      <th>name</th>
+      <th>type</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script type="text/html" id="template">
+<tr>
+  <td>{_id}</td>
+  <td>{name}</td>
+  <td>{type}</td>
+</tr>
+</script>
+<script>
+String.prototype.supplant = function (o) {
+  return this.replace(/{([^{}]*)}/g, function (a, b) {
+      var r = o[b];
+      return typeof r === 'string' || typeof r === 'number' ? r : a;
+    }
+  );
+};
+
+var xhr = new XMLHttpRequest();
+var url = 'https://dragons-api.herokuapp.com/api/dragons';
+// var url = 'http://localhost:8080/api/dragons';
+
+xhr.open('GET', url, true);
+xhr.send();
+
+var $template = document.getElementById('template').innerHTML,
+    $result = document.getElementById('result'),
+    $tbody = $result.querySelector('tbody');
+
+xhr.addEventListener('readystatechange', function() {
+  if ((xhr.readyState === 4 || xhr.status === 200) && xhr.responseText) {
+    var json = JSON.parse(xhr.responseText),
+        html = '';
+
+    json.forEach(function(dragon) {
+      html += $template.supplant(dragon);
+    });
+
+    $tbody.innerHTML = html;
+  } else {
+    console.log(xhr);
+  }
+});
+</script>
+
+</body>
+</html>
