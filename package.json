@@ -1,6 +1,7 @@
 {
   "name": "dragons-api",
   "version": "0.0.1",
+  "versionDate": "2015-05-23 20:59",
   "private": true,
   "main": "bin/www",
   "repository": {
