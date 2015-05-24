@@ -40,4 +40,16 @@ describe('Main Endpoints', function () {
         done();
       });
   });
+
+  it('GET /favicon.ico', function(done) {
+    request(app)
+      .get('/favicon.ico')
+      .end(function(err, response) {
+        var result = response.body;
+        debug(err, result);
+
+        assert.equal(response.type, 'image/x-icon');
+        done();
+      });
+  });
 });//describe

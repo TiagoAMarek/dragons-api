@@ -15,9 +15,8 @@ app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(function (request, response, next) {
   if (request.url === '/favicon.ico') {
-    response
-      .writeHead(200, {'Content-Type': 'image/x-icon'})
-      .end('');
+    response.writeHead(200, {'Content-Type': 'image/x-icon'});
+    response.end('');
   } else {
     next();
   }
