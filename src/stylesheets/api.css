@@ -40,14 +40,13 @@ h3 { font-size: 1.1em; }
 
 .api-item-title:hover { color: #000; }
 
-
 /* endpoints */
 .endpoints {
   width: 80%;
   margin: 20px auto;
 }
 .endpoint-item {
-  margin-bottom: 15px;
+  margin-bottom: 15px; border-radius: 3px;
 }
 .noun {
   color: #fff;
@@ -83,8 +82,11 @@ h3 { font-size: 1.1em; }
 
 .endpoint-content { padding: 15px; }
 
-pre { background: #F5F5F5; border: 1px solid #DCDCDC; min-height: 20px; }
-
+pre {
+  background: #F5F5F5;
+  border: 1px solid #DCDCDC; border-radius: 3px;
+  min-height: 15px; padding: 4px 15px;
+}
 @media only screen and (max-width: 1180px) {
   body { font-size: 12px; }
   .content,
@@ -92,7 +94,6 @@ pre { background: #F5F5F5; border: 1px solid #DCDCDC; min-height: 20px; }
 
   pre { overflow: auto; font-size: 0.9em; }
 }
-
 @media only screen and (max-width: 680px) {
   pre { overflow: auto; font-size: 0.8em; }
 }
