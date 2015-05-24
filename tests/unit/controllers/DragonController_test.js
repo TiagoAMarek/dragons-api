@@ -57,6 +57,16 @@ describe('DragonController', function () {
     DragonController.retrieveOne(request, response, fixtures.next);
   });
 
+  it('#retrieveOne not found', function() {
+    request.params.slug = 'not-found';
+    function _next(obj) {
+      assert.equal(obj.status, 404);
+      assert.equal(obj.toString(), 'Error: Dragon not found');
+    }
+
+    DragonController.retrieveOne(request, response, _next);
+  });
+
   it('#update', function() {
     request.params.slug = 'tiamat';
     response.json = function(obj) {

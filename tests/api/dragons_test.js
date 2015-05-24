@@ -54,6 +54,22 @@ describe('Dragons Endpoint', function () {
     });
   });
 
+  it('GET /api/dragons/:slug not found', function(done) {
+    var slug = 'not-found';
+
+    request(app)
+      .get('/api/dragons/' + slug)
+      .set('Accept', 'application/json')
+      .expect(200)
+      .end(function(err, response) {
+        var result = response.body;
+        debug(err, result);
+
+        assert.equal(response.statusCode, 404);
+        done();
+      });
+  });
+
   it('POST /api/dragons', function(done) {
     var shenlong = { name: 'Shenlong', type: 'Chinese' };
 

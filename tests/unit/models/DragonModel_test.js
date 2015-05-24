@@ -21,9 +21,17 @@ describe('DragonModel', function () {
   });
 
   it('#findOne', function(done) {
-    DragonModel.findOne({ name: 'Tiamat' }, function(err, result) {
+    DragonModel.findOne({ slug: 'tiamat' }, function(err, result) {
       debug(result);
       assert.equal(result.name, 'Tiamat');
+      done();
+    });
+  });
+
+  it('#findOne not found', function(done) {
+    DragonModel.findOne({ slug: 'not-found' }, function(err, result) {
+      debug(result);
+      assert.equal(result, null);
       done();
     });
   });
