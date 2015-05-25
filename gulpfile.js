@@ -17,7 +17,7 @@ var js = {
 gulp.task('css', function () {
   gulp.src([
     css.source + '/normaset.css',
-    css.source + '/api.css'
+    css.source + '/*.css'
   ])
   .pipe(concat('all.min.css'))
   .pipe(minifycss({keepSpecialComments: false}))
