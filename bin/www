@@ -18,7 +18,9 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 function onSocketConnection(socket) {
-  console.log('a user connected');
+  socket.on('turn', function(msg){
+    io.emit('turn', msg);
+  });
 }
 
 function normalizePort(val) {
