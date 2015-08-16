@@ -4,6 +4,7 @@ var express         = require('express'),
     bodyParser      = require('body-parser'),
     methodOverride  = require('method-override'),
     swig            = require('swig'),
+    cors            = require('cors'),
     debug           = require('debug')('dragons:app'),
     app             = express();
 
@@ -30,11 +31,7 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(function(request, response, next) {
-  response.header("Access-Control-Allow-Origin", "*");
-  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+app.use(cors());
 
 // routes
 app.use('/', require('./routes'));
