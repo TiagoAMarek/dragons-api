@@ -16,6 +16,20 @@ DragonDAO.prototype.insert = function(data, callback) {
   });
 };
 
+DragonDAO.prototype.count = function(query, callback) {
+  this.model
+    .count(query)
+    .exec(callback);
+};
+
+DragonDAO.prototype.paginated = function(query, pagination, callback) {
+  this.model
+    .find(query)
+    .limit(pagination.size)
+    .skip(pagination.skip)
+    .exec(callback);
+};
+
 DragonDAO.prototype.find = function(query, callback) {
   this.model.find(query).exec(callback);
 };

@@ -2,6 +2,8 @@
 var debug     = require('debug')('dragons:model'),
     _Promise  = require('bluebird');
 
+const PAGE_SIZE = 10;
+
 function DragonController(DAO) {
   this.DAO = _Promise.promisifyAll(DAO);
 }
@@ -15,9 +17,25 @@ DragonController.prototype.create = function(request, response, next) {
 };
 
 DragonController.prototype.retrieve = function(request, response, next) {
-  this.DAO.findAsync({})
+  let page = parseInt(request.query.page || 0, 10);
+  let size = parseInt(request.query.size, 10) || PAGE_SIZE;
+  let skip = page * PAGE_SIZE;
+  let query = {};
+
+    _Promise.all([
+      this.DAO.countAsync(query),
+      this.DAO.paginatedAsync(query, { size, skip })
+    ])
     .then(function(result) {
-      response.json(result);
+      response.json({
+        items: result[1],
+        _metadata: {
+          page: page,
+          per_page: size,
+          page_count: result[1].length,
+          total_count: result[0]
+        }
+      });
     })
     .catch(next);
 };

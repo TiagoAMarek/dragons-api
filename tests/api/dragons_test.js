@@ -29,7 +29,7 @@ describe('Dragons Endpoint', function () {
         var result = response.body;
         debug(err, result);
 
-        assert.equal(result.length, 3);
+        assert.equal(result.items.length, 3);
         done();
       });
   });
