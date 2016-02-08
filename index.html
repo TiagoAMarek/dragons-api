@@ -50,9 +50,10 @@ var $template = document.getElementById('template').innerHTML,
 xhr.addEventListener('readystatechange', function() {
   if ((xhr.readyState === 4 || xhr.status === 200) && xhr.responseText) {
     var json = JSON.parse(xhr.responseText),
+        dragons = json.items,
         html = '';
 
-    json.forEach(function(dragon) {
+    dragons.forEach(function(dragon) {
       html += $template.supplant(dragon);
     });
 
