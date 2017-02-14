@@ -73,5 +73,20 @@
     "name": "Smaug",
     "histories": ["The Hobbit"],
     "type": "Fire"
+  },
+  {
+    "name": "Balerion",
+    "histories": ["Game of Thrones"],
+    "type": "Fire"
+  },
+  {
+    "name": "Meraxes",
+    "histories": ["Game of Thrones"],
+    "type": "Fire"
+  },
+  {
+    "name": "Asa de Prata",
+    "histories": ["Game of Thrones"],
+    "type": "Fire"
   }
 ]
